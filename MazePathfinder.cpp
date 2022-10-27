@@ -9,11 +9,13 @@
 #include "Console.h"
 #include "CodeAbbey.h"
 #include "LS_library.h"
-#define VERSION "1.0"
+#define VERSION "0.2"
 
 using namespace std;
-int main()
-{
+
+vector<vector<vector<string>>> Traverse(vector<vector<string>>& map, int H, int W);
+
+int main() {
 	//
 	cout << "MazePathfinder v" << VERSION << "!\n\n";
 	string path = "Test.txt";
@@ -31,6 +33,14 @@ int main()
 		data.at(r - 1) = row;
 	}
 	print2DVector(data);
+
+	vector<vector<vector<string>>> SolvedPath = Traverse(data, WIDTH, HEIGHT);
+	print3DVector(SolvedPath);
 }
 
+vector<vector<vector<string>>> Traverse(vector<vector<string>>& map, int H, int W) {
+	vector<vector<vector<string>>> path(H, vector<vector<string>>(W, vector<string>()));
 
+
+	return path;
+}

@@ -1,5 +1,5 @@
 /*
-	v 0.2
+	v 0.3
 */
 #include <iostream>
 #include <vector>
@@ -52,6 +52,19 @@ void print2DVector(std::vector<std::vector<char>>& vct) {
 	for (const auto& row : vct) {
 		for (const auto& col : row) {
 			std::cout << col << "\t";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+	return;
+}
+void print3DVector(std::vector<std::vector<std::vector<std::string>>>& vct) {
+	for (const auto& row : vct) {
+		for (const auto& col : row) {
+			for (const auto& instance : col) {
+				std::cout << instance;
+			}
+			std::cout << "\t";
 		}
 		std::cout << std::endl;
 	}
