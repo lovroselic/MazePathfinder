@@ -1,5 +1,5 @@
 /*
-	v 0.3
+	v 0.4
 */
 #include <iostream>
 #include <vector>
@@ -52,6 +52,16 @@ void print2DVector(std::vector<std::vector<char>>& vct) {
 	for (const auto& row : vct) {
 		for (const auto& col : row) {
 			std::cout << col << "\t";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+	return;
+}
+void print2DVector(std::vector<std::vector<bool>>& vct) {
+	for (const auto& row : vct) {
+		for (const auto& col : row) {
+			std::cout << std::boolalpha << col << "\t";
 		}
 		std::cout << std::endl;
 	}
